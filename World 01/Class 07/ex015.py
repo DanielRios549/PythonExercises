@@ -3,7 +3,7 @@
     Calculate the price to pay, knowing that the car costs R$60 per day and R$0.15 per kilometer rack up.
 '''
 
-days = int(input('Hopw many days you rent the car? '))
+days = int(input('How many days you rent the car? '))
 distance = float(input('How many kilometers the car racked up? '))
 price = (60 * days) + (0.15 * distance)
 

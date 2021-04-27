@@ -4,4 +4,4 @@
 number1 = int(input('Type a number: '))
 number2 = int(input('Type another number: '))
 
-print(f'The sum betweeen {number1} and {number2} equals {number1 + number2}')
+print(f'The sum between {number1} and {number2} equals {number1 + number2}')
