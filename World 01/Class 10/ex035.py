@@ -6,8 +6,8 @@ second = float(input('Second line: '))
 third = float(input('Third line: '))
 
 if first + second > third and first + third > second and third + second > first:
-    verb = 'can'
+    verb = '\033[32mcan\033[m'
 else:
-    verb = 'cannot'
+    verb = '\033[31mcannot\033[m'
 
 print(f'These lines {verb} create a triangle!')

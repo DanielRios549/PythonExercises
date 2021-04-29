@@ -3,4 +3,4 @@
 '''
 
 price = float(input('What\'s the price of the product? R$'))
-print(f'The product costs R${price:.2f}, the new price is R${price - (price * 5 / 100):.2f}')
+print(f'The product costs R$\033[32m{price:.2f}\033[m, the new price is R$\033[32m{price - (price * 5 / 100):.2f}\033[m')

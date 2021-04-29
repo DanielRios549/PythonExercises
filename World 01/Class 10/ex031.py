@@ -7,4 +7,4 @@ distance = float(input('What is the distance of the trip '))
 print(f'You are near to start a trip of {distance:.1f}km')
 
 price = 0.50 if distance <= 200 else 0.45
-print(f'The trip will costs R${distance * price:.2f}')
+print(f'The trip will costs \033[34mR${distance * price:.2f}\033[m')

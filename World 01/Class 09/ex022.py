@@ -10,8 +10,8 @@ name = input('Type your complete name: ').strip()
 splitted = name.split()
 
 print(f''' Analysing your name...
-In uppercase it is {name.upper()}.
-In lowercase it is {name.lower()}.
-It contains {len(''.join(splitted))} letters''')  # The same as len(name) - name.count(' ')
+In uppercase it is \033[32m{name.upper()}\033[m.
+In lowercase it is \033[34m{name.lower()}.\033[m
+It contains \033[33m{len(''.join(splitted))}\033[m letters''')  # The same as len(name) - name.count(' ')
 
-print(f'Your first name is {splitted[0]} and it contains {len(splitted[0])} letters')  # The last is the same as name.find(' ')
+print(f'Your first name is \033[35m{splitted[0]}\033[m and it contains \033[36m{len(splitted[0])}\033[m letters')  # The last is the same as name.find(' ')

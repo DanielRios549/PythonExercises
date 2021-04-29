@@ -10,4 +10,4 @@ student3 = input('Who is the third? ')
 student4 = input('And who is the fourth? ')
 students = [student1, student2, student3, student4]
 
-print(f'The chosen student is {choice(students)}')
+print(f'The chosen student is \033[32m{choice(students)}\033[m')

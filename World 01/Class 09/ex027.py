@@ -4,6 +4,6 @@
 name = input('What is your name? ').strip().title()
 splitted = name.split()
 
-print(f'Nice to meet you, {name}!')
-print(f'Your first name is {splitted[0]}')  # Could also be name[:name.find(" ")], without split
-print(f'Your last name is {splitted[len(splitted) - 1]}')  # Could also be name[name.rfind(" ") + 1:], without split
+print(f'Nice to meet you, \033[32m{name}!\033[m')
+print(f'Your first name is \033[33m{splitted[0]}\033[m')  # Could also be name[:name.find(" ")], without split
+print(f'Your last name is \033[35m{splitted[len(splitted) - 1]}\033[m')  # Could also be name[name.rfind(" ") + 1:], without split

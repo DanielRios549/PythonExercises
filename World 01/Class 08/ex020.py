@@ -11,4 +11,4 @@ student4 = input('And who is the fourth? ')
 students = [student1, student2, student3, student4]
 shuffle(students)
 
-print(f'The order of presentation is {students}')
+print(f'The order of presentation is \033[32m{students}\033[m')

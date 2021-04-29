@@ -3,8 +3,8 @@
 '''
 number = int(input('input a number: '))
 
-print(f'''Unit: {number // 1 % 10}
-Ten: {number // 10 % 10}
-Hundred: {number // 100 % 10}
-Thousand: {number // 1000 % 10}
+print(f'''Unit: \033[31m{number // 1 % 10}\033[m
+Ten: \033[32m{number // 10 % 10}\033[m
+Hundred: \033[33m{number // 100 % 10}\033[m
+Thousand: \033[34m{number // 1000 % 10}\033[m
 ''')

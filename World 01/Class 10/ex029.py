@@ -9,4 +9,4 @@ if speed <= 80:
 else:
     pay = (speed - 80) * 7
     print('Hey, you are too fast!')
-    print(f'You will need to pay R$ {pay:.2f} for the traffic ticket.')
+    print(f'You will need to pay \033[31mR$ {pay:.2f}\033[m for the traffic ticket.')

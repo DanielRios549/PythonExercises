@@ -3,4 +3,4 @@
 '''
 
 number = int(input('Type a number:? '))
-print(f'You typed {number}, its predecessor is {number - 1}, and its successor its {number + 1}')
+print(f'You typed \033[34m{number}\033[m, its predecessor is \033[32m{number - 1}\033[m, and its successor its \033[31m{number + 1}\033[m')

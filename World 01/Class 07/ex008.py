@@ -3,10 +3,10 @@
 '''
 meters = float(input('What is the measure? '))
 
-print(f'{meters} meters is the same as')
-print(f'{meters / 1000:.3f}km')
-print(f'{meters / 100:.2f}hm')
-print(f'{meters / 10:.1f}dam')
-print(f'{meters * 10:.0f}dm')
-print(f'{meters * 100:.0f}cm')
-print(f'{meters * 1000:.0f}mm')
+print(f'\033[35m{meters}\033[m meters is the same as')
+print(f'\033[31m{meters / 1000:.3f}\033[m km')
+print(f'\033[32m{meters / 100:.2f}\033[m hm')
+print(f'\033[33m{meters / 10:.1f}\033[m dam')
+print(f'\033[34m{meters * 10:.0f}\033[m dm')
+print(f'\033[35m{meters * 100:.0f}\033[m cm')
+print(f'\033[36m{meters * 1000:.0f}\033[m mm')

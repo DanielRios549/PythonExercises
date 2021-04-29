@@ -10,4 +10,4 @@ if salary <= 1250:
 else:
     percent = 10
 
-print(f'An employee that earns R${salary:.2f} will earn R${salary + (salary * percent / 100):.2f} with {percent}% raise.')
+print(f'An employee that earns \033[34mR${salary:.2f}\033[m will earn \033[32mR${salary + (salary * percent / 100):.2f}\033[m with \033[35m{percent}%\033[m raise.')
