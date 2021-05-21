@@ -3,7 +3,6 @@
 '''
 
 sentence = ''.join(input('Type a sentence: ').strip().lower().split())
-length = len(sentence)
 inverse = sentence[::-1]
 
 if sentence == inverse:
