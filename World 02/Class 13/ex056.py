@@ -28,7 +28,7 @@ for count in range(0, 4, 1):
     if max(ages) == age:
         oldest = name
     if gender == 'F' and age < 20:
-        w_under_20 += 1
+        w_under += 1
 
 print(f'The avarage of age is \033[34m{sum(ages) / len(ages):.0f}\033[m years old')
 print(f'The name of the oldest person is \033[34m{oldest}\033[m')
