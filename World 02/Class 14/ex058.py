@@ -5,8 +5,8 @@
 from random import randint
 
 computer = randint(1, 10)
-print(computer)
-player = int(input('Choose a number: '))
+print('I chose a number between 0 and 10')
+player = int(input('Guess What? '))
 attempts = attempt = 1
 
 if computer == player:
