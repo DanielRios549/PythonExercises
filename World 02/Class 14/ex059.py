@@ -22,18 +22,26 @@ optionText = '''
 
 Choose an operation: '''
 
-option = int(input(optionText))
+option = 0
 
-while option == 4:
-    value1 = float(input('First Value: '))
-    value2 = float(input('Second Value: '))
-
+while option != 5:
     option = int(input(optionText))
 
-if option == 1:
-    print(f'\033[34m{value1}\033[m + \033[34m{value2}\033[m equals \033[32m{value1 + value2:.2f}\033[m.')
-elif option == 2:
-    print(f'\033[34m{value1}\033[m x \033[34m{value2}\033[m equals \033[32m{value1 * value2:.2f}\033[m.')
-elif option == 3:
-    values = [value1, value2]
-    print(f'The highest number you choose is \033[32m{max(values)}\033[m')
+    if option != 5:
+        if option == 4:
+            value1 = float(input('First Value: '))
+            value2 = float(input('Second Value: '))
+
+        # Operations
+
+        if option == 1:
+            print(f'\033[34m{value1}\033[m + \033[34m{value2}\033[m equals \033[32m{value1 + value2:.2f}\033[m.')
+        elif option == 2:
+            print(f'\033[34m{value1}\033[m x \033[34m{value2}\033[m equals \033[32m{value1 * value2:.2f}\033[m.')
+        elif option == 3:
+            values = [value1, value2]
+            print(f'The highest number you choose is \033[32m{max(values)}\033[m')
+        else:
+            print('\033[31mChoose a valid option, please.\033[m')
+    else:
+        print('Going out...')
