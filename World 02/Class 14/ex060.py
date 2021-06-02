@@ -6,8 +6,9 @@
 
 number = int(input('Choose a number: '))
 result = 1
+print(f'\033[34m{number}!\033[m is calculated by', end=' ')
 
-while number >= 1:
+while number >= 1:  # Could be also calculated with math.factorial()
     result *= number
 
     if number > 1:
