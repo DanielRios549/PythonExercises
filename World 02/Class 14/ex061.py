@@ -7,7 +7,7 @@
 
 first = int(input('What\'s the number? '))
 reason = int(input('What\'s the term? '))
-last = first + (reason * 9)
+last = first + (reason * 9)  # This is not necessary, it could also be made with a counter
 current = first
 
 while current <= last:

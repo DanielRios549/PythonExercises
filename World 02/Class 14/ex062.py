@@ -13,8 +13,8 @@ while current <= last:
         print(f'\033[34m{current}\033[m', end=' -> ')
     else:
         print(f'\033[34m{current}\033[m')
-        more = input('Show more? [S/N]').strip().upper()
+        more = int(input('How many do you want to show more? '))
 
-        if more == 'S':
-            last = current + (reason * 10)
+        if more > 0:
+            last = current + (reason * more)
     current += reason
