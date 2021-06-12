@@ -3,8 +3,7 @@
     In the end show how many numbers they choose and show the sum between them, except from the flag.
 '''
 number = int(input('Choose a number: [999 to exit] '))
-total = 0
-sum = 0
+total = sum = 0
 
 while number != 999:
     total += 1

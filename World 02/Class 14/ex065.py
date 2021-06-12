@@ -5,8 +5,7 @@
 number = int(input('Choose a number: '))
 again = input('Do you want to continue? [S/N]').strip().upper()
 total = 1
-maximum = number
-minimum = number
+minimum = maximum = number
 
 while again == 'S':
     number2 = int(input('Choose another number: '))
