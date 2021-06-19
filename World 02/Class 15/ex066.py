@@ -2,7 +2,7 @@
     Remake the exercise 064, now using break.
 '''
 
-number = result = count = 0
+result = count = 0
 
 while True:
     number = int(input('type a number: [999 to stop] '))
