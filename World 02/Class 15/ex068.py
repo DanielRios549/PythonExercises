@@ -5,7 +5,8 @@
 from random import randint
 
 divisor = '=-' * 20
-print(f'{divisor}\n{"Lets play!":^40}\n{divisor}')
+print(f'{divisor}\n{"Even or Odd Game":^40}\n{divisor}')
+count = 0
 
 while True:
     computer = randint(1, 5)
@@ -18,12 +19,16 @@ while True:
     else:
         type = 'odd'
 
-    print(f'You plays \033[34m{number}\033[m and the computer plays \033[34m{computer}\033[m. The sum is \033[34m{sum}\033[m ({type})')
+    print(f'You play \033[34m{number}\033[m and the computer plays \033[34m{computer}\033[m. The sum is \033[34m{sum}\033[m ({type})')
 
     if option == 'e' and type == 'even':
-        print('\033[32mYou win\033[m, good game.')
+        print('\033[32mYou won\033[m, good game.')
+        count += 1
     elif option == 'o' and type == 'odd':
-        print('Y\033[32mou win\033[m, goog game.')
+        print('\033[32mYou won\033[m, good game.')
+        count += 1
     else:
-        print(f'\033[31mYou lose\033[m, try again.')
+        print(f'\033[31mYou lost\033[m, try again.')
         break
+
+print(f'You won {count} times.')
