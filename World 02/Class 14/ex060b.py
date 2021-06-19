@@ -8,7 +8,7 @@ number = int(input('Choose a number: '))
 result = 1
 print(f'\033[34m{number}!\033[m is calculated by', end=' ')
 
-for count in range(number, 0, -1):  # Could be also calculated with math.factorial()
+for count in range(number, 0, -1):  # Could also be calculated with math.factorial()
     result *= count
 
     if count > 1:
