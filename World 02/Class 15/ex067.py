@@ -1,9 +1,7 @@
 '''
-    Show the multiplication table of various numbers.
+    Show the multiplication table of various numbers, one by one.
     The program should stops if the number was negative.
 '''
-
-number = 0
 
 while True:
     number = int(input('Choose a number shot its multiplication table: '))
@@ -12,7 +10,7 @@ while True:
         break
 
     count = 1
-    while count <= 10:
+    while count <= 10:  # Could also be made with a for loop, it is better indeed.
         print(f'\033[34m{number}\033[m x \033[34m{count:>2}\033[m = \033[32m{number * count}\033[m')
         count += 1
 
