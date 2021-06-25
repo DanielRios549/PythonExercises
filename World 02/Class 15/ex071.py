@@ -20,25 +20,29 @@ while count < widthdraw:
         count += 50
         toCount = widthdraw - count
     else:
-        print(f'Bills of R$ 50: {bills50}')
+        if bills50 > 0:
+            print(f'Bills of R$ 50: {bills50}')
 
     while toCount >= 20:
         bills20 += 1
         count += 20
         toCount = widthdraw - count
     else:
-        print(f'Bills of R$ 20: {bills20}')
+        if bills20 > 0:
+            print(f'Bills of R$ 20: {bills20}')
 
     while toCount >= 10:
         bills10 += 1
         count += 10
         toCount = widthdraw - count
     else:
-        print(f'Bills of R$ 10: {bills10}')
+        if bills10 > 0:
+            print(f'Bills of R$ 10: {bills10}')
 
     while toCount >= 1:
         bills1 += 1
         count += 1
         toCount = widthdraw - count
     else:
-        print(f'Bills of R$ 1: {bills1}')
+        if bills1 > 0:
+            print(f'Bills of R$ 1: {bills1}')
