@@ -7,8 +7,10 @@
     2 - How many of them are man.
     3 - How many women are lower than 20 years old.
 '''
-division = '-=' * 20
-print(f'{division}\n{"People Register":^40}\n{division}')
+
+dlength = 20
+division = '-=' * dlength
+print(f'{division}\n{"People Register":^{dlength * 2}}\n{division}')
 
 all18 = man = women20 = 0
 
