@@ -18,10 +18,7 @@ while True:
     name = input('Product name: ')
     price = float(input('Price: R$ '))
 
-    if total == 0:
-        cheapestValue = price
-        cheapestName = name
-    elif price < cheapestValue:
+    if total == 0 or price < cheapestValue:
         cheapestValue = price
         cheapestName = name
 
