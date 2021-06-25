@@ -8,8 +8,9 @@
     3 - The name of cheaper product.
 '''
 
-division = '=-' * 20
-print(f'{division}\n{"The Cheapest Shot":^40}\n{division}')
+dlength = 20
+division = '=-' * dlength
+print(f'{division}\n{"The Cheapest Shop":^{dlength * 2}}\n{division}')
 
 total = higher1000 = cheapestValue = cheapestName = 0
 
