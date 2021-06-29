@@ -18,7 +18,7 @@ questions = ('first', 'last', 'alphabetical', 'position')
 
 for question in questions:
     if question == 'first':
-        print(f'The first 5 teams are: \033[34m{table[:6]}\033[m')
+        print(f'The first 5 teams are: \033[34m{table[:5]}\033[m')
 
     elif question == 'last':
         print('The last 4 teams are: ')
