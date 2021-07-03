@@ -12,4 +12,4 @@ for count in range(0, 5):
 numbers = tuple(numbers)  # After creating the list, convert it to a tuple to make it immutable.
 
 print(f'The generated numbers are {numbers}')
-print(f'The lowest is {min(numbers)} and the highest is {max(numbers)}')
+print(f'The lowest is \033[34m{min(numbers)}\033[m and the highest is \033[34m{max(numbers)}\033[m')

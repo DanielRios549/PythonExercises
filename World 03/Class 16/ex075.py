@@ -21,6 +21,6 @@ values = tuple(values)
 even = tuple(even)
 
 print(f'The number you chose are {values}')
-print(f'The number 9 appears {values.count(9)} times')
-print(f'The number 3 appears in the index {values.index(3)} for the first time')
+print(f'The number 9 appears \033[34m{values.count(9)}\033[m times')
+print(f'The number 3 appears in the index \033[34m{values.index(3)}\033[m for the first time')
 print(f'The even numbers are {even}')
