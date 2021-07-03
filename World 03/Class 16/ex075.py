@@ -22,5 +22,10 @@ even = tuple(even)
 
 print(f'The number you chose are {values}')
 print(f'The number 9 appears \033[34m{values.count(9)}\033[m times')
-print(f'The number 3 appears in the index \033[34m{values.index(3)}\033[m for the first time')
+
+if 3 in values:
+    print(f'The number 3 appears in the \033[34m{values.index(3) + 1}\033[mª position for the first time')
+else:
+    print('There is no number 3 in this tuple')
+
 print(f'The even numbers are {even}')
