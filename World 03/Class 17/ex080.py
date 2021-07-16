@@ -10,10 +10,10 @@ for count in range(0, 5):
 
     if count == 0 or number >= max(numbers):
         numbers.append(number)
-        print('Adding in the end')
+        print('Adding in the \033[31mend\033[m')
     elif number <= min(numbers):
         numbers.insert(0, number)
-        print('Adding in the start')
+        print('Adding in the \033[32mstart\033[m')
     else:
         add = 0
         for index in range(0, len(numbers)):
@@ -22,6 +22,6 @@ for count in range(0, 5):
             else:
                 break
         numbers.insert(add, number)
-        print(f'Adding at the position {add}')
+        print(f'Adding at the \033[34mposition {add}\033[m')
 
 print(numbers)
