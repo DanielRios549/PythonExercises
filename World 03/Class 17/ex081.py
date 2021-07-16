@@ -9,8 +9,7 @@
 numbers = []
 
 while True:
-    number = int(input('Choose a number: '))
-    numbers.append(number)
+    numbers.append(int(input('Choose a number: ')))
 
     again = input('Do you want to continue? [Y/N] ').strip().upper()
 
