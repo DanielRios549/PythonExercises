@@ -9,9 +9,10 @@
 people = list()
 
 while True:
-    name = input('Name: ')
-    weight = float(input('Weight: (Kg) '))
-    people.append([name, weight])
+    people.append([
+        input('Name: '),
+        float(input('Weight: (Kg) '))
+    ])
 
     again = input('Do you want to continue? [S/N]: ').strip()
 
