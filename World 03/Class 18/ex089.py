@@ -16,7 +16,7 @@ while True:
     if again in 'nN':
         break
 
-width = [5, 10, 7]
+width = (5, 10, 7)
 division = '-' * sum(width)
 
 print(f'{"Nº.":<{width[0]}}{"Name":<{width[1]}}{"Average":<{width[2]}}')
@@ -26,7 +26,6 @@ for number, student in enumerate(students):
     print(f'{number + 1:<{width[0]}}{student[0]:<{width[1]}}{(student[1][0] + student[1][1]) / 2:>{width[2]}.2f}')
 
 print(division)
-
 
 while True:
     show = int(input('Do you want to show the grades of which student? [999 to stop]: '))
