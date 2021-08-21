@@ -9,7 +9,7 @@ scores = list()
 width = 20
 divisor = '-*'
 
-for player in range(0, 4):
+for player in range(0, int(input('How many players: ').strip())):
     dice = randint(1, 6) + randint(1, 6)
 
     if dice not in scores:
@@ -28,15 +28,9 @@ print(divisor * width)
 print(f'{"Ranking":^{len(divisor) * width}}')
 print(divisor * width)
 
-index = 0
-current = 0
+index = 1
 
 for score in scores:
     for player in players[str(score)]:
-        current += 1
-        index += 1
-
-        if current != index:
-            index += current
-
         print(f'{index}º Place: \033[32m{player}\033[m with \033[34m{score}\033[m points.')
+        index += 1
