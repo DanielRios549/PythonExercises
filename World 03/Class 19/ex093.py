@@ -16,7 +16,7 @@ player = {
 }
 
 for match in range(0, player['matches']):
-    goals = int(input(f'Goals in the \033[32m{match + 1}º\033[m match? '))
+    goals = int(input(f'\tGoals in the \033[32m{match + 1}º\033[m match? '))
     player['goals'].append(goals)
 
     player['total'] += goals
@@ -38,3 +38,5 @@ print(f"The player called \033[32m{player['name']}\033[m plays \033[34m{len(play
 
 for index, value in enumerate(player['goals']):
     print(f'\t=> In the \033[32m{index + 1}º\033[m match, \033[34m{value}\033[m goals.')
+
+print(f"A total of \033[32m{player['total']}\033[m goals.")
