@@ -65,25 +65,22 @@ for index, player in enumerate(team):
 print(line)
 print(divisor)
 
+
 while True:
-    while True:
-        show = int(input('Show information for which player? [999 to stop]: '))
+    show = int(input('Show information for which player? [999 to stop]: '))
 
-        if show != 999:
-            if show > len(team):
-                print(line)
-                print('This player \033[31mdoes not exist\033[m. Choose another from table above.')
-                print(line)
-            else:
-                player = team[show - 1]
-                print(line)
-                print(f'The player {player["name"]} has the following stats:')
-                print(line)
-
-                for index, goal in enumerate(player['goals']):
-                    print(f'{tabulation}Match \033[34m{index + 1}\033[m: Scores \033[32m{goal}\033[m goals.')
+    if show != 999:
+        if show > len(team):
+            print(line)
+            print('This player \033[31mdoes not exist\033[m. Choose another from table above.')
+            print(line)
         else:
-            break
+            player = team[show - 1]
+            print(line)
+            print(f'The player \033[34m{player["name"]}\033[m has the following stats:')
+            print(line)
 
-    if show == 999:
+            for index, goal in enumerate(player['goals']):
+                print(f'{tabulation}Match \033[34m{index + 1}\033[m: Scores \033[32m{goal}\033[m goals.')
+    else:
         break
