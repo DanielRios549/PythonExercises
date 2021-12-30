@@ -1,4 +1,6 @@
 import utils.colors as color
+import utils.show as show
+import utils.people.actions as people
 from utils.read import readInt
 
 
@@ -17,7 +19,7 @@ def options():
 
     print('\n')
 
-    valid = False
+    valid = ''
 
     while valid not in optionsList:
         try:
@@ -38,19 +40,25 @@ def options():
 
 
 def menu(title: str, width: int = 0):
-    separator = '-'
-
     if width == 0:
         width = len(title) + 4
 
     while True:
-        print(color.blue(separator * width))
-        print(color.green(title.center(width)))
-        print(color.blue(separator * width))
+        show.header(title, width)
 
         option = options()
 
-        if option == optionsList[-1]:
-            break
+        if type(option) == str:
+            if 'View' in option.split():
+                people.list()
+
+            elif 'Register' in option.split():
+                people.register()
+
+            else:
+                break
+
+        else:
+            print(color.red('Hum, there was a problem with the program...'))
 
     return option
