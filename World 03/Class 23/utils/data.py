@@ -2,13 +2,14 @@ import utils.colors as color
 from utils.read import readInt
 
 
-def options():
-    optionsList = [
-        'View Registered People',
-        'Register Another Person',
-        'Exit'
-    ]
+optionsList = [
+    'View Registered People',
+    'Register Another Person',
+    'Exit'
+]
 
+
+def options():
     print('\n')
 
     for index, item in enumerate(optionsList):
@@ -42,10 +43,14 @@ def menu(title: str, width: int = 0):
     if width == 0:
         width = len(title) + 4
 
-    print(color.blue(separator * width))
-    print(color.green(title.center(width)))
-    print(color.blue(separator * width))
+    while True:
+        print(color.blue(separator * width))
+        print(color.green(title.center(width)))
+        print(color.blue(separator * width))
 
-    option = options()
+        option = options()
+
+        if option == optionsList[-1]:
+            break
 
     return option
