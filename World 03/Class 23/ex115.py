@@ -5,9 +5,9 @@
     1 - Register a new person.
     2 - Show all registered people.
 '''
-import utils.data as data
+import utils.menu as menu
 import utils.colors as color
 
-option = data.menu('Main Menu', 30)
+option = menu.create('Main Menu', 30)
 
 print(f'Your Option is: {color.green(option)}')

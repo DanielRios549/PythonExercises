@@ -39,7 +39,7 @@ def options():
     return valid
 
 
-def menu(title: str, width: int = 0):
+def create(title: str, width: int = 0):
     if width == 0:
         width = len(title) + 4
 
