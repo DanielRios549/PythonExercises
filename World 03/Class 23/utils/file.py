@@ -1,17 +1,20 @@
 from io import TextIOWrapper, UnsupportedOperation
 from os import path
 import utils.colors as color
+import utils.show as show
+
 
 FILE_DIR = path.join(path.dirname(__file__), 'people')
 FILE_NAME = '_people'
 FILE_EXT = 'txt'
 
 
-def exists(name: str = FILE_NAME, ext: str = FILE_EXT):
+def exists(filedir: str = FILE_DIR, filename: str = FILE_NAME, ext: str = FILE_EXT):
     exists = False
 
     try:
-        open(f'{FILE_DIR}/{name}.{ext}')
+        file = open(f'{filedir}/{filename}.{ext}', 'rt')
+        file.close()
     except FileNotFoundError:
         exists = False
     else:
@@ -20,11 +23,11 @@ def exists(name: str = FILE_NAME, ext: str = FILE_EXT):
     return exists
 
 
-def create(name: str = FILE_NAME, ext: str = FILE_EXT):
+def create(filedir: str = FILE_DIR, filename: str = FILE_NAME, ext: str = FILE_EXT):
     created = False
 
     try:
-        file = open(f'{FILE_DIR}/{name}.{ext}', 'wt+')
+        file = open(f'{filedir}/{filename}.{ext}', 'wt+')
 
     except UnsupportedOperation:
         print(color.red('There was an error to create the file.'))
@@ -39,13 +42,38 @@ def create(name: str = FILE_NAME, ext: str = FILE_EXT):
     return created
 
 
-def read(name: str = FILE_NAME, ext: str = FILE_EXT):
+def read(filedir: str = FILE_DIR, filename: str = FILE_NAME, ext: str = FILE_EXT):
     try:
-        file = open(rf'{FILE_DIR}/{name}.{ext}', 'r+')
+        file = open(rf'{filedir}/{filename}.{ext}', 'rt')
         lines = file.readlines()
+        file.close()
 
     except FileNotFoundError:
         print(color.red('File does not exists'), color.blue('Try Register someone first.'))
 
     else:
-        print(lines)
+        for line in lines:
+            person = line.replace("\n", "")
+            splitted = person.split(',')
+            name = splitted[0]
+            age = splitted[1]
+
+            rightWidth = 2
+
+            print(f'{name:_<{show.WIDTH - rightWidth}}{age:>{rightWidth}}')
+
+
+def write(text: str, filedir: str = FILE_DIR, filename: str = FILE_NAME, ext: str = FILE_EXT):
+    if exists() is not True:
+        create()
+
+    try:
+        file = open(f'{filedir}/{filename}.{ext}', 'at')
+        file.write(f'\n{text}')
+        file.close()
+
+    except UnsupportedOperation:
+        print(color.red('Error to add the person.'))
+
+    else:
+        print(color.green('Added'))

@@ -1,3 +1,6 @@
+import utils.colors as color
+
+
 def readInt(text: str):
     typeText = 'Integer'
     valid = False
@@ -42,3 +45,19 @@ def readFloat(text: str):
             option = number
 
     return option
+
+
+def readName(text: str):
+    while True:
+        try:
+            name = str(input(text).strip())
+
+            if not name.replace(' ', '').isalpha():
+                print(color.red('Choose a valid person name, please'))
+            else:
+                break
+
+        except Exception:
+            print(color.red('Choose a valid person name, please (Exception)'))
+
+    return name.title()

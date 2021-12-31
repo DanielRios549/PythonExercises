@@ -1,7 +1,6 @@
 from time import sleep
 import utils.show as show
 import utils.file as file
-import utils.colors as color
 
 
 def list():
@@ -9,12 +8,12 @@ def list():
     fileExists = file.exists()
 
     if fileExists is True:
-        show.header(info, len(info) + 4)
+        show.header(info)
 
     file.read()
     sleep(2)
 
 
-def register():
-    print(color.green('Register will be added soon.'))
+def register(name: str, age: int):
+    file.write(f'{name},{age}')
     sleep(2)

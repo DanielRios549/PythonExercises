@@ -1,8 +1,7 @@
 import utils.colors as color
 import utils.show as show
+import utils.read as read
 import utils.people.actions as people
-from utils.read import readInt
-
 
 optionsList = [
     'View Registered People',
@@ -23,7 +22,7 @@ def options():
 
     while valid not in optionsList:
         try:
-            option = readInt('Your Option: ')
+            option = read.readInt('Your Option: ')
 
             if option == 0:
                 option = 1
@@ -44,7 +43,7 @@ def create(title: str, width: int = 0):
         width = len(title) + 4
 
     while True:
-        show.header(title, width)
+        show.header(title)
 
         option = options()
 
@@ -53,12 +52,15 @@ def create(title: str, width: int = 0):
                 people.list()
 
             elif 'Register' in option.split():
-                people.register()
+                name = read.readName('Name: ')
+                age = read.readInt('Age: ')
+
+                people.register(name, age)
 
             else:
                 break
 
         else:
-            print(color.red('Hum, there was a problem with the program...'))
+            print(color.red('Ops, there is a problem with the program...'))
 
     return option
