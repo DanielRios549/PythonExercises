@@ -28,6 +28,7 @@ def create(filedir: str = FILE_DIR, filename: str = FILE_NAME, ext: str = FILE_E
 
     try:
         file = open(f'{filedir}/{filename}.{ext}', 'wt+')
+        file.close()
 
     except UnsupportedOperation:
         print(color.red('There was an error to create the file.'))
@@ -49,18 +50,18 @@ def read(filedir: str = FILE_DIR, filename: str = FILE_NAME, ext: str = FILE_EXT
         file.close()
 
     except FileNotFoundError:
-        print(color.red('File does not exists'), color.blue('Try Register someone first.'))
+        print(color.red('File does not exists.'), color.blue('Try register someone first.'))
 
     else:
         for line in lines:
             person = line.replace("\n", "")
             splitted = person.split(',')
             name = splitted[0]
-            age = splitted[1]
+            age = f'{splitted[1]} Years Old'
 
-            rightWidth = 2
+            rightWidth = len(age)
 
-            print(f'{name:_<{show.WIDTH - rightWidth}}{age:>{rightWidth}}')
+            print(f'{name:-<{show.WIDTH - rightWidth}}{age:>{rightWidth}}')
 
 
 def write(text: str, filedir: str = FILE_DIR, filename: str = FILE_NAME, ext: str = FILE_EXT):
@@ -69,11 +70,11 @@ def write(text: str, filedir: str = FILE_DIR, filename: str = FILE_NAME, ext: st
 
     try:
         file = open(f'{filedir}/{filename}.{ext}', 'at')
-        file.write(f'\n{text}')
+        file.write(f'{text}\n')
         file.close()
 
     except UnsupportedOperation:
-        print(color.red('Error to add the person.'))
+        print(color.red('Error to register the person.'))
 
     else:
-        print(color.green('Added'))
+        print(color.green('Person successfully registered.'))

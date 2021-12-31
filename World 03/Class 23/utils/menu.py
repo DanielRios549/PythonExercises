@@ -1,3 +1,4 @@
+from time import sleep
 import utils.colors as color
 import utils.show as show
 import utils.read as read
@@ -58,6 +59,8 @@ def create(title: str, width: int = 0):
                 people.register(name, age)
 
             else:
+                show.header('Exiting... Se you!')
+                sleep(2)
                 break
 
         else:

@@ -6,8 +6,5 @@
     2 - Show all registered people.
 '''
 import utils.menu as menu
-import utils.colors as color
 
 option = menu.create('Main Menu')
-
-print(f'Your Option is: {color.green(option)}')
